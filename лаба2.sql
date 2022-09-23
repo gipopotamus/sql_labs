@@ -1,19 +1,19 @@
--- Ηΰδΰνθε 1
+-- Γ‡Γ Γ¤Γ Γ­Γ¨Γ¥ 1
 
--- ο1.1
+-- Γ―1.1
 SELECT DISTINCT City, StateProvince FROM SalesLT.Address order by StateProvince;
--- ο1.2
+-- Γ―1.2
 SELECT Name, Weight FROM SalesLT.Product ORDER BY Weight DESC OFFSET 0 ROWS FETCH First 29 ROW ONLY;
---ο1.3
+--Γ―1.3
 SELECT Name, Weight FROM SalesLT.Product ORDER BY Weight DESC OFFSET 10 ROWS FETCH First 100 ROW ONLY;
 
--- Ηΰδΰνθε 2
+-- Γ‡Γ Γ¤Γ Γ­Γ¨Γ¥ 2
 
--- ο2.1 
+-- Γ―2.1 
 SELECT Name, Color, Size FROM SalesLT.Product WHERE ProductModelID = 1;
--- ο2.2
+-- Γ―2.2
 SELECT ProductNumber, Name FROM SalesLT.Product WHERE (Color = 'black' or Color = 'red' or Color = 'white') and (Size = 'S' or Size = 'M')
--- ο2.3
+-- Γ―2.3
 SELECT ProductNumber, Name, ListPrice FROM SalesLT.Product WHERE ProductNumber LIKE 'BK-%';
--- ο2.4
-SELECT ProductNumber, Name, ListPrice FROM SalesLT.Product WHERE ProductNumber LIKE 'BK-[^R]___-__'
+-- Γ―2.4
+SELECT ProductNumber, Name, ListPrice FROM SalesLT.Product WHERE ProductNumber LIKE 'BK-[^R]___-[0-9]'
