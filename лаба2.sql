@@ -3,7 +3,7 @@
 -- ï1.1
 SELECT DISTINCT City, StateProvince FROM SalesLT.Address order by StateProvince;
 -- ï1.2
-SELECT Name, Weight FROM SalesLT.Product ORDER BY Weight DESC OFFSET 0 ROWS FETCH First 29 ROW ONLY;
+SELECT TOP[10] percent Name, Weight FROM SalesLT.Product ORDER BY Weight;
 --ï1.3
 SELECT Name, Weight FROM SalesLT.Product ORDER BY Weight DESC OFFSET 10 ROWS FETCH First 100 ROW ONLY;
 
